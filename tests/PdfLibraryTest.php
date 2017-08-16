@@ -11,7 +11,7 @@ class PdfLibraryTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->mpdf = Mockery::mock('\Mpdf\Mpdf');
+        $this->mpdf = Mockery::mock('mPDF');
         $this->mpdf->shouldReceive('create')
         ->with(\Mockery::any())
         ->shouldReceive('setData')->with(\Mockery::any())

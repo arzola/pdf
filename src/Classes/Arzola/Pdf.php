@@ -1,15 +1,15 @@
 <?php namespace Arzola;
 
-use Mpdf\Mpdf;
+use mPDF;
 
 class Pdf
 {
     private $generator;
     private $data;
 
-    public function __construct(Mpdf $generator=null)
+    public function __construct($generator=null)
     {
-        $this->generator = (is_null($generator))? new \Mpdf\Mpdf : $generator;
+        $this->generator = (is_null($generator))? new mPDF : $generator;
     }
 
     public function setData($data)
