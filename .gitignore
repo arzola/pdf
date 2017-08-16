@@ -6,3 +6,6 @@ node_modules
 .idea/
 
 .env
+
+#Exclude composer.lock because we are set the latest library versions on the composer.json
+composer.lock
