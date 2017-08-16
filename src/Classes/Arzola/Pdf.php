@@ -19,6 +19,7 @@ class Pdf
 
     public function create($data)
     {
+        $this->addHeader();
         $content = $this->generator->WriteHTML($this->data);
         return $this->generator->Output($content,'S');
     }
@@ -26,6 +27,12 @@ class Pdf
     public function save()
     {
         return file_put_contents('file.pdf',$this->create($this->data));
+    }
+
+    private function addHeader()
+    {
+        $header = "<img src='http://blog.legacyteam.info/wp-content/uploads/2014/10/laravel-logo-white.png' />";
+        $this->data = "$header<p>{$this->data}</p>";
     }
 
 }
