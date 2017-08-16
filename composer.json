@@ -1,0 +1,23 @@
+{
+    "name": "arzola/pdf",
+    "description": "A PDP wrapper using mPDF for testing",
+    "type": "library",
+    "require": {
+        "mpdf/mpdf": "^6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.3",
+        "mockery/mockery": "*"
+    },
+    "authors": [
+        {
+            "name": "Oscar Arzola",
+            "email": "oscararzola@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Arzola\\": "src/Classes/Arzola"
+        }   
+    }
+}

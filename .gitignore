@@ -1,0 +1,8 @@
+#Exclude vendor and node_modules directories
+vendor/
+node_modules
+
+#Exclude .idea directory when use intelliJ IDEs
+.idea/
+
+.env
